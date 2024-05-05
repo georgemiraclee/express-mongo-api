@@ -17,7 +17,11 @@ exports.findAll = (req, res) => {
 
 }
 exports.show = (req, res) => {
-    
+    const id =req.params.id;
+
+    mahasiswa.findById(id)
+    .then(data => res.send(data))
+    .catch(err => res.status(500).send({message: err.message}));
 }
 exports.update = (req, res) => {
     
