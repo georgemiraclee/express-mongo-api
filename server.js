@@ -23,10 +23,10 @@ db.mongoose.connect(db.url, mongooseConfig)
     process.exit(1); // Exit with failure
   });
 
-// Routes
-app.get("/", (req, res) => {
-  res.json({ message: "AWAKOWAKOKWA" });
-});
+// call routes mahasiswa
+
+require ("./app/routes/mahasiswa.routes")(app);
+
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
