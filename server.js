@@ -24,7 +24,6 @@ db.mongoose.connect(db.url, mongooseConfig)
   });
 
 // call routes mahasiswa
-
 require ("./app/routes/mahasiswa.routes")(app);
 
 
